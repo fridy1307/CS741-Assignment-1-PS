@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        img {
+          border: 1px solid #555;
+        }
+    </style>
+	<title>CS741 - Assignment 1</title>
+</head>
+<body>
+
+<h1>CS741 Assignment 1 Testing: Browser Extension</h1>
+
+<h2>Test GET:</h2>
+
+<form action="xss_test.php" method="get">
+    <label for="data">Data:</label>
+    <input type="text" id="data" name="data"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<h2>Test POST:</h2>
+
+<form action="xss_test.php" method="post">
+    <label for="data">Data:</label>
+    <input type="text" id="data" name="data"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<br> <br>
+<p>
+    <h3>Expected Behaviour:</h3>
+    For valid requests, the form should get submitted and "GET(or POST) request processed" will be displayed on 'xss_test.php' page. <br> <br>
+    For invalid requests, your extension should block the request and you should be able to see something similar to the following picture: <br> <br>
+    <img src="request_blocked.png" alt="Request Blocked Image" width="550" height="300"> <br> <br>
+    If there is any issue, please contact the TAs. <br>
+</p>
+
+</body>
+</html>
